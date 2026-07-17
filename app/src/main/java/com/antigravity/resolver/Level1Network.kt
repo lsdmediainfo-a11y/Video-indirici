@@ -39,11 +39,11 @@ class Level1Network : MediaResolver {
         override fun onLoadRequest(
             session: GeckoSession, 
             request: GeckoSession.NavigationDelegate.LoadRequest
-        ): GeckoSession.NavigationDelegate.LoadRequest {
+        ): org.mozilla.geckoview.GeckoResult<org.mozilla.geckoview.AllowOrDeny>? {
             scope.launch {
                 resolve(ResolveContext(url = request.uri))
             }
-            return request
+            return org.mozilla.geckoview.GeckoResult.allow()
         }
     }
 }
