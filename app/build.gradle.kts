@@ -41,5 +41,5 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     
     // GeckoView
-    implementation("org.mozilla.geckoview:geckoview-nightly:+") 
+    implementation("org.mozilla.geckoview:geckoview:122.0.20240205133611") 
 }
